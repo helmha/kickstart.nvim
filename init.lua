@@ -154,22 +154,22 @@ require('lazy').setup({
 
   {
     -- Theme inspired by Atom
-  --   'navarasu/onedark.nvim',
-  --   priority = 1000,
-  --   config = function()
-  --     vim.cmd.colorscheme 'onedark'
-  --   end,
-  },
-  --
-  {
-    "folke/tokyonight.nvim",
-    lazy=false,
+    'navarasu/onedark.nvim',
     priority = 1000,
     config = function()
-      vim.cmd.colorscheme 'tokyonight-moon'
+      vim.cmd.colorscheme 'onedark'
     end,
-    opts = {},
   },
+  --
+  -- {
+  --   "folke/tokyonight.nvim",
+  --   lazy=false,
+  --   priority = 1000,
+  --   config = function()
+  --     vim.cmd.colorscheme 'tokyonight-moon'
+  --   end,
+  --   opts = {},
+  -- },
 
   {
     -- Set lualine as statusline
@@ -239,7 +239,7 @@ require('lazy').setup({
   --    Uncomment the following line and add your plugins to `lua/custom/plugins/*.lua` to get going.
   --
   --    For additional information see: https://github.com/folke/lazy.nvim#-structuring-your-plugins
-  -- { import = 'custom.plugins' },
+{ import = 'custom.plugins' },
 }, {})
 
 -- [[ Setting options ]]
@@ -248,6 +248,9 @@ require('lazy').setup({
 
 -- Set highlight on search
 vim.o.hlsearch = false
+
+-- Set tabstop 
+-- vim.o.tabstop = 4
 
 -- Make line numbers default
 vim.wo.number = true
